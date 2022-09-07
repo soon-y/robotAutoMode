@@ -2,7 +2,6 @@ package app;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Point;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 
