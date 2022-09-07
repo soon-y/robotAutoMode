@@ -5,7 +5,6 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JToggleButton;
 
 /**
  * Status View: 6 JLable indicating status, dimension, time
