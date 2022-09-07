@@ -1,7 +1,5 @@
 package app;
 
-import java.rmi.RemoteException;
-
 import automode.BatteryObserver;
 import automode.LocationObserver;
 import automode.MapObserver;
