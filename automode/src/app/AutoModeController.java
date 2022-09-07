@@ -20,7 +20,7 @@ import javax.swing.JButton;
  *
  */
 public class AutoModeController extends MouseAdapter implements Runnable{
-	DateTimeFormatter - = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+	DateTimeFormatter dft = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	LocalDateTime now = LocalDateTime.now();
 	private Application model;
 	private View app;
