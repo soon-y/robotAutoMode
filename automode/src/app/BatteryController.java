@@ -45,8 +45,7 @@ public class BatteryController extends Thread implements ActionListener{
 		while(battery > 0) {
 			// update the label for battery level
 			if(model.myRobot().inOperation()) {
-				app.getBattryView().batteryLabel().setText(model.myRobot().getBattery()+" %");	
-				Thread.sleep(1000);		
+				app.getBattryView().batteryLabel().setText(model.myRobot().getBattery()+" %");		
 			}
 			// when pause toggle ON
 			if(pause()) {
