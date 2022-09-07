@@ -89,14 +89,14 @@ public class Robot extends Subject implements Runnable{
 	public void moving() {
 		int btry = getBattery();
 		if (btry > 80) { robotPostion(10, 0);
-		}else if(btry == 80) { DetecteObs(); robotPostion(0, -10);
+		}else if(btry == 80) { detecteObs(); robotPostion(0, -10);
 		}else if (btry < 80 && btry > 75) { robotPostion(0, -10);
 		}else if (btry <=75 && btry > 68) { robotPostion(-10, 0);
-		}else if (btry ==68) { DetecteObs(); robotPostion(0, -10);
+		}else if (btry ==68) { detecteObs(); robotPostion(0, -10);
 		}else if (btry < 68 && btry > 63) { robotPostion(0, -10);
 		}else if (btry <=63 && btry > 51) { robotPostion(10, 0);
 		}else if (btry <=51 && btry > 36) { robotPostion(0, -10);
-		}else if (btry ==36) { DetecteWall(); robotPostion(-10, 0);
+		}else if (btry ==36) { detecteWall(); robotPostion(-10, 0);
 		}else if (btry < 36 && btry > 31) { robotPostion(-10, 0);
 		}else if (btry <=31 && btry > 21) { robotPostion(0, 10);
 		}else if (btry <=21 && btry > 16) { robotPostion(-10, 0);
