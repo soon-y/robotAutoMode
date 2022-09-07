@@ -17,15 +17,24 @@ public class MapView extends JPanel{
 	ArrayList<Decorator> deco = new ArrayList<>();
 	private int robotSize;
 	private int robotEdge;
-	private int width;		private int height;
-	private int xMargin;	private int yMargin;
-	private int mapWidth; 	private int mapHeight;
-	private int x; 			private int y;
-	private int wallWidth; 	private int wallHeight;
-	private int obsWidth; 	private int obsHeight;
-	private int x0;			private int y0;
-	private int obsX;		private int obsY;
-	private int wallX;		private int wallY;
+	private int width;		
+	private int height;
+	private int xMargin;	
+	private int yMargin;
+	private int mapWidth; 	
+	private int mapHeight;
+	private int x; 			
+	private int y;
+	private int wallWidth; 	
+	private int wallHeight;
+	private int obsWidth; 	
+	private int obsHeight;
+	private int x0;			
+	private int y0;
+	private int obsX;		
+	private int obsY;
+	private int wallX;		
+	private int wallY;
 
 	public MapView(int width, int height, Application model) {
 		this.width = width;
