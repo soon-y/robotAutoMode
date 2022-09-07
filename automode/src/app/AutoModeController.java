@@ -74,40 +74,26 @@ public class AutoModeController extends MouseAdapter implements Runnable{
 	}
 
 	public void setText() {
-		int num = 100-model.myRobot().getBattery();
-		double size = 0.0;
-		int time = num;
-
-		app.getStatusView().setStatus().setText("Auto Mode");
-		app.getStatusView().showSize().setText(size+"");
-		app.getStatusView().showTime().setText(time + " mins");
 		//when AutoMode button is clicked
-		if(model.myRobot().inOperation() == true) {
-			int robotBattery = model.myRobot().getBattery();
-			while (robotBattery > 0) {
-				int battery = model.myRobot().getBattery();
-				num = 100-battery;
-				size = num/3.4;
-				time = num/2;
-				//when pause toggle ON/OFF
-				if(!model.myRobot().moveRobot()) {
-					app.getStatusView().setStatus().setText("Pause");
-				}else {
-					app.getStatusView().setStatus().setText("Auto Mode");
-				}
-				//when back to Home
-				if(!model.myRobot().inOperation()) {
-					app.getStatusView().setStatus().setText("Standby");
-				}
-
-				// keep updating time and dimension for cleaning every 1 sec
-				app.getStatusView().showSize().setText(String.format("%.1f",size));;
-				app.getStatusView().showTime().setText(time + " mins");
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-				}
+		while(model.myRobot().inOperation()) {
+			int battery = model.myRobot().getBattery();
+			int num = 100-battery;
+			double size = num/3.4;
+			int time = num/2;
+			//when pause toggle ON/OFF
+			if(!model.myRobot().moveRobot()) {
+				app.getStatusView().setStatus().setText("Pause");
+			}else {
+				app.getStatusView().setStatus().setText("Auto Mode");
 			}
+
+			app.getStatusView().showSize().setText(String.format("%.1f",size));
+			app.getStatusView().showTime().setText(time + " mins");			
+		}
+		
+		//when back to Home
+		if(!model.myRobot().inOperation()) {
+			app.getStatusView().setStatus().setText("Standby");
 		}
 
 	}
